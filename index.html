@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="base.js"></script>
+</head>
+
+<body>
+
+    <a-scene background="color:#000000">
+        <a-sky src="p1.jpg"></a-sky>
+        <a-camera position="0 0 15"></a-camera>
+
+        <a-assets timeout="10000">
+            <a-asset-item id="car" src="./car/scene.gltf"></a-asset-item>
+        </a-assets>
+
+        <a-entity scale="1.5 1.5 1.5">
+            <a-cylinder position="0 -7 -13" rotation="0 0 0" radius="14" height="1" color="#43e67c" mc1></a-cylinder>
+            <a-entity position="0 -7 -10" rotation="0 0 0" scale="0.15 0.15 0.15" gltf-model="#car" mc1></a-entity>
+        </a-entity>
+
+    </a-scene>
+
+</body>
+
+</html>
